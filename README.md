@@ -9,4 +9,13 @@ A basic HTML, CSS, and JavaScript project for testing purposes.
 
 ## 📁 Project Structure
 thesysprosite
+
+│
 ├── index.html
+├── css/
+├── js/
+├── Dockerfile
+├── docker-compose.yml
+├── nginx.conf
+├── README.md
+└── .gitignore
