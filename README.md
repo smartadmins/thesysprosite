@@ -8,7 +8,6 @@ A basic HTML, CSS, and JavaScript project for testing purposes.
 - JavaScript interaction (button click)
 
 ## 📁 Project Structure
-simple-test-webpage/
 │
 ├── index.html
 ├── css/
