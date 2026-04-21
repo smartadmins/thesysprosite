@@ -8,12 +8,5 @@ A basic HTML, CSS, and JavaScript project for testing purposes.
 - JavaScript interaction (button click)
 
 ## 📁 Project Structure
-│
+thesysprosite
 ├── index.html
-├── css/
-├── js/
-├── Dockerfile
-├── docker-compose.yml
-├── nginx.conf
-├── README.md
-└── .gitignore
