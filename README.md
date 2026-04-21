@@ -12,10 +12,17 @@ thesysprosite
 
 │
 ├── index.html
+
 ├── css/
+
 ├── js/
+
 ├── Dockerfile
+
 ├── docker-compose.yml
+
 ├── nginx.conf
+
 ├── README.md
+
 └── .gitignore
