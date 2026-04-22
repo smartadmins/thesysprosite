@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thesyspro-deployment
+  labels:
+    app: thesyspro
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: thesyspro
+  template:
+    metadata:
+      labels:
+        app: thesyspro
+    spec:
+      containers:
+      - name: thesyspro-container
+        image: ksudhy/thesyspro:${BUILD_NAME}
+        ports:
+        - containerPort: 80
