@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: thesyspro-container
-        image: ksudhy/thesysprosite:22
+        image: ksudhy/thesysprosite:latest
         ports:
         - containerPort: 80
