@@ -23,6 +23,13 @@ pipeline {
                 """
             }
         }
+             stage('Trivy Filesystem Scan') {
+            steps {
+                sh """
+                    trivy fs --format table --severity HIGH,CRITICAL .
+                """
+            }
+        }
 
         stage('Login to DockerHub') {
             steps {
@@ -58,4 +65,3 @@ pipeline {
         }
     }
 }
-
