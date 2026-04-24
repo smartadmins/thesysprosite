@@ -9,4 +9,4 @@ A basic HTML, CSS, and JavaScript project for testing purposes.
 
 ## 📁 Project Structure
 thesysprosite for test
-added trivy
+added trivy scanning
