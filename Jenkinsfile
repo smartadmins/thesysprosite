@@ -11,7 +11,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/smartadmins/thesysprosite.git'
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/smartadmins/thesysprosite.git']])
             }
         }
 
@@ -19,11 +19,12 @@ pipeline {
             steps {
                 sh """
                 docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
-                docker tag ${IMAGE_NAME}:${IMAGE_TAG} ${IMAGE_NAME}:latest
+                docker tag ${IMAGE_NAME}:${IMAGE_TAG} ${IMAGE_NAME}:${IMAGE_TAG}
                 """
             }
         }
-             stage('Trivy Filesystem Scan') {
+
+         stage('Trivy Filesystem Scan') {
             steps {
                 sh """
                     trivy fs --format table --severity HIGH,CRITICAL .
@@ -44,12 +45,12 @@ pipeline {
             steps {
                 sh """
                 docker push ${IMAGE_NAME}:${IMAGE_TAG}
-                docker push ${IMAGE_NAME}:latest
+                docker push ${IMAGE_NAME}:${IMAGE_TAG}
                 """
             }
         }
     }
-
+ 
     post {
         always {
             sh 'docker logout || true'
