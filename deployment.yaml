@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: thesyspro-container
-        image: ksudhy/$JOB_NAME:v1.$BUILD_ID
+        image: ksudhy/v1.$BUILD_ID
 
         ports:
         - containerPort: 80
